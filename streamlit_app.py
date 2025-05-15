@@ -1,4 +1,3 @@
-
 import zipfile
 import pandas as pd
 import os
@@ -6,22 +5,7 @@ import io
 import base64
 import streamlit as st
 from datetime import datetime
-# At the top of app.py
-st.set_page_config(
-    page_title="ZIP CSV Processor",
-    page_icon="📊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-with st.sidebar:
-    st.title("Configuration")
-    st.write("Customize your CSV processing")
-    
-    # Add options for handling missing columns
-    handle_missing = st.selectbox(
-        "Handle missing columns by:",
-        ["Skip", "Create empty", "Use default values"]
-    )
+
 def process_zip_file(uploaded_zip_file):
     """
     Extracts a CSV file from an uploaded ZIP archive, renames specific column headers,
@@ -70,11 +54,7 @@ def process_zip_file(uploaded_zip_file):
         'Unique Opened': 'Unique_Open_Count',
         'Unique Opened %': 'Unique_Click_Count'
     }
-    # Inside your processing function
-progress_bar = st.progress(0)
-for i, chunk in enumerate(pd.read_csv(io.BytesIO(csv_content), chunksize=1000)):
-    # Process chunk
-    progress_bar.progress(min(1.0, (i+1)/total_chunks))
+    
     # Display original columns for verification
     st.write("Original columns:", df.columns.tolist())
     
