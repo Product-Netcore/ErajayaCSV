@@ -5,7 +5,13 @@ import io
 import base64
 import streamlit as st
 from datetime import datetime
-
+# At the top of app.py
+st.set_page_config(
+    page_title="ZIP CSV Processor",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 def process_zip_file(uploaded_zip_file):
     """
     Extracts a CSV file from an uploaded ZIP archive, renames specific column headers,
