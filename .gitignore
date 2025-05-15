@@ -1,5 +1,12 @@
 .streamlit/secrets.toml
 
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+.streamlit/secrets.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
