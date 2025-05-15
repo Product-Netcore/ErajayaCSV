@@ -1,19 +1,9 @@
-# 🎈 Blank app template
+# ZIP CSV Processor
 
-A simple Streamlit app template for you to modify!
+A Streamlit web application that processes ZIP files containing CSV data and renames specified column headers.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Features
+- Upload ZIP files containing CSV data
+- Automatically extract and process CSV files
+- Rename column headers based on predefined mapping
+- Download the processed CSV file
