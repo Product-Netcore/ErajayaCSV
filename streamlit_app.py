@@ -1,3 +1,10 @@
+# At the top of app.py
+st.set_page_config(
+    page_title="ZIP CSV Processor",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 import zipfile
 import pandas as pd
 import os
